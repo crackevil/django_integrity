@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-integrity"
+version = "0.1.0"
+description = "remove and fillup lost integrity (indexes and constraints) between Django model definitions and the real database schema."
+readme = "readme.md"
+requires-python = ">=3.9"
+dependencies = ["django"]
+classifiers = [
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Database",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["django_integrity*"]
+exclude = ["testprj_django_integrity*"]
